@@ -6,14 +6,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { findIndex, get, map, replace, set } from 'lodash';
+import { get, map, replace, set } from 'lodash';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button';
-import FormDivider from '../../components/FormDivider';
-import Input from '../../components/InputsIndex';
-import Logo from '../../assets/logo_strapi.png';
-import SocialLink from '../../components/SocialLink';
+import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
 
 // Utils
 import auth from '../../utils/auth';
@@ -23,7 +19,7 @@ import form from './forms.json';
 import './styles.css';
 
 class AuthPage extends React.Component {
-  state = { value: {}, errors: [], didCheckErrors: false };
+  state = { value: {}, error: null};
 
   componentDidMount() {
     this.generateForm(this.props);
@@ -40,7 +36,7 @@ class AuthPage extends React.Component {
 
     switch (this.props.match.params.authType) {
       case 'login':
-        requestURL = 'http://localhost:1337/auth/local';
+        requestURL = 'http://localhost:8000/api/auth/login';
         break;
       case 'register':
         requestURL = 'http://localhost:1337/auth/local/register';
@@ -79,19 +75,14 @@ class AuthPage extends React.Component {
       set(body, 'url', 'http://localhost:3000/auth/reset-password');
     }
 
-    request(requestURL, { method: 'POST', body: this.state.value })
+    request(requestURL, { method: 'POST', body: { user: this.state.value} })
       .then(response => {
         auth.setToken(response.jwt, body.rememberMe);
         auth.setUserInfo(response.user, body.rememberMe);
         this.redirectUser();
       })
       .catch(err => {
-        // TODO handle errors for other views
-        // This is just an example
-        const errors = [
-          { name: 'identifier', errors: [err.response.payload.message] },
-        ];
-        this.setState({ didCheckErrors: !this.state.didCheckErrors, errors });
+        this.setState({ error: err.response.payload.errors.message});
       });
   };
 
@@ -120,35 +111,84 @@ class AuthPage extends React.Component {
   renderLink = () => {
     if (this.props.match.params.authType === 'login') {
       return (
-        <div>
+        <Message>
+          {/*
           <Link to="/auth/forgot-password">Forgot Password</Link>
-          &nbsp;or&nbsp;
-          <Link to="/auth/register">register</Link>
-        </div>
+          &nbsp;or&nbsp;*/}
+          <Link to="/auth/register">Register</Link>
+        </Message>
       );
     }
 
     return (
-      <div>
+      <Message>
         <Link to="/auth/login">Ready to signin</Link>
-      </div>
+      </Message>
     );
   };
 
+  getHeaderText = () => {
+    let text;
+
+    switch (this.props.match.params.authType) {
+      case 'login':
+        text = 'Login';
+        break;
+      case 'register':
+        text = 'Register';
+        break;
+      case 'reset-password':
+        text = 'Reset Password';
+        break;
+      case 'forgot-password':
+        text = 'Forgot Password';
+        break;
+      default:
+    }
+
+    return text;
+  }
+
   render() {
-
-    const {authType} = this.props.match.params;
-
-    const divStyle =
-      this.props.match.params.authType === 'register'
-        ? { marginTop: '3.2rem' }
-        : { marginTop: '.9rem' };
     const inputs = get(form, ['views', this.props.match.params.authType], []);
-    const providers = ['facebook', 'github', 'googl e', 'twitter']; // To remove a provider from the list just delete it from this array...
+    const error = this.state.error;
 
     return (
       <div className="authPage">
-        <div className="wrapper">
+        <div className='wrapper'>
+            <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
+            <Grid.Column style={{ maxWidth: 450 }}>
+              <Header as='h2' color='teal' textAlign='center'>
+                <Image src='/logo.png' /> {this.getHeaderText()}
+              </Header>
+              <Form size='large' onSubmit={this.handleSubmit}>
+                <Segment stacked>
+                {map(inputs, (input, key) => (
+                  <Form.Input fluid 
+                    icon={get(input, 'icon')} 
+                    key={get(input, 'name')}
+                    iconPosition='left' 
+                    label={get(input, 'label')}
+                    placeholder={get(input, 'placeholder')}  
+                    onChange={this.handleChange}
+                    name={get(input, 'name')}
+                    value={get(this.state.value, get(input, 'name'), '')}
+                    type={get(input, 'type')} />
+                ))}
+                {error != null && <div class='ui negative message'>
+                  <p>{error}</p>
+                </div>}
+
+                  <Button color='teal' fluid size='large'>
+                    Submit
+                  </Button>
+                </Segment>
+              </Form>
+              {this.renderLink()}
+            </Grid.Column>
+          </Grid> 
+        </div>
+        {/*
           <div className="headerContainer">
             {this.props.match.params.authType === 'register' ? (
               <span>Welcome !</span>
@@ -165,13 +205,6 @@ class AuthPage extends React.Component {
           </div>
           <div className="formContainer" style={divStyle}>
             <div className="container-fluid">
-              <div className="row">
-                <div className="col-md-12">
-                  {providers.map(provider => (
-                    <SocialLink provider={provider} key={provider} />
-                  ))}
-                </div>
-              </div>
               <FormDivider />
               <form onSubmit={this.handleSubmit}>
                 <div className="row" style={{ textAlign: 'start' }}>
@@ -212,6 +245,7 @@ class AuthPage extends React.Component {
           </div>
           <div className="linkContainer">{this.renderLink()}</div>
         </div>
+                      */}
       </div>
     );
   }

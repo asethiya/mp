@@ -26,7 +26,7 @@ if(!isProduction) {
 }
 
 //Configure Mongoose
-mongoose.connect('mongodb://localhost/mp-server', { useNewUrlParser: true } );
+mongoose.connect('mongodb+srv://db-user:1234@cluster0-rvrjn.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
 mongoose.set('debug', true);
 
 //Models & routes

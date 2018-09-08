@@ -5,10 +5,19 @@ const auth = require('../auth');
 const Users = mongoose.model('Users');
 
 //POST new user route (optional, everyone has access)
-router.post('/', auth.optional, (req, res, next) => {
+router.post('/signup', auth.optional, (req, res, next) => {
   
   const { body: { user } } = req;
 
+  if(!user.username) {
+    return res.status(422).json({
+      errors: {
+        username: 'is required',
+      },
+    });
+  }
+
+  
   if(!user.email) {
     return res.status(422).json({
       errors: {
@@ -30,7 +39,7 @@ router.post('/', auth.optional, (req, res, next) => {
   finalUser.setPassword(user.password);
 
   return finalUser.save()
-    .then(() => res.json({ user: finalUser.toAuthJSON() }))
+    .then(() => res.json(finalUser.toAuthJSON()))
     .catch((err) =>  res.status(422).json(err));
 });
 
@@ -38,10 +47,10 @@ router.post('/', auth.optional, (req, res, next) => {
 router.post('/login', auth.optional, (req, res, next) => {
   const { body: { user } } = req;
 
-  if(!user.email) {
+  if(!user.username) {
     return res.status(422).json({
       errors: {
-        email: 'is required',
+        username: 'is required',
       },
     });
   }
@@ -60,13 +69,16 @@ router.post('/login', auth.optional, (req, res, next) => {
     }
 
     if(passportUser) {
-      const user = passportUser;
-      user.token = passportUser.generateJWT();
-
-      return res.json({ user: user.toAuthJSON() });
+      return res.json(passportUser.toAuthJSON());
+    }else{
+        
     }
 
-    return status(400).info;
+    return res.status(401).json({
+      errors: {
+        message: 'authentication failed',
+      },
+    });
   })(req, res, next);
 });
 
@@ -80,7 +92,7 @@ router.get('/current', auth.required, (req, res, next) => {
         return res.sendStatus(400);
       }
 
-      return res.json({ user: user.toAuthJSON() });
+      return res.json(user.toAuthJSON());
     });
 });
 

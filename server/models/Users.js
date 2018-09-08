@@ -6,7 +6,8 @@ const uniqueValidator = require('mongoose-unique-validator');
 const { Schema } = mongoose;
 
 const UsersSchema = new Schema({
-  email: { type: String, unique: true },
+  username: { type: String, unique: true },
+  email: String,
   hash: String,
   salt: String,
 });
@@ -29,7 +30,7 @@ UsersSchema.methods.generateJWT = function() {
   expirationDate.setDate(today.getDate() + 60);
 
   return jwt.sign({
-    email: this.email,
+    username: this.username,
     id: this._id,
     exp: parseInt(expirationDate.getTime() / 1000, 10),
   }, 'secret');
@@ -37,9 +38,11 @@ UsersSchema.methods.generateJWT = function() {
 
 UsersSchema.methods.toAuthJSON = function() {
   return {
-    _id: this._id,
-    email: this.email,
-    token: this.generateJWT(),
+    user :{
+      _id: this._id,
+      username: this.username
+    },
+    jwt : this.generateJWT()
   };
 };
 
