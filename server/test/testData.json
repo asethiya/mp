@@ -1,0 +1,20 @@
+{
+    "employer": {
+        "username": "employer",
+        "email": "employer@mp.com",
+        "password": "igotmoney"
+    },
+    "employee" :{
+        "username": "employee",
+        "email": "employee@mp.com",
+        "password": "ineedmoney"
+    },
+
+    "project" : {
+        "title": "Market Place",
+        "description": "Create a market place for employers to submit projects",
+        "budget": 12000,
+        "bidEnds": "10/01/2018",
+        "completeBy": "12/31/2018"
+    }
+}

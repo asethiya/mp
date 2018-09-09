@@ -1,0 +1,218 @@
+{
+    "users" : [{
+        "username": "gstoakley0",
+        "email": "hcraisford0@japanpost.jp",
+        "password": "E8C5jNdO"
+      }, {
+        "username": "earmit1",
+        "email": "dcawtheray1@ning.com",
+        "password": "tVc703TT0NYP"
+      }, {
+        "username": "mvickarman2",
+        "email": "eavrahamian2@squarespace.com",
+        "password": "RtrNCIUw"
+      }, {
+        "username": "astuddeard3",
+        "email": "crooze3@topsy.com",
+        "password": "IrOgLkiyHkp"
+      }, {
+        "username": "mlippitt4",
+        "email": "mwingeatt4@bbc.co.uk",
+        "password": "RFpHA4YEpfoN"
+      }, {
+        "username": "cwannes5",
+        "email": "bcockman5@time.com",
+        "password": "Mo67WtSb26wi"
+      }, {
+        "username": "jsapp6",
+        "email": "mleirmonth6@cnet.com",
+        "password": "N9UbCfd"
+      }],
+
+    "projects": {
+        "gstoakley0" : [{
+            "title": "Open-source analyzing matrices",
+            "description": "s9SBNI d8g2WnqIMDIAPDkOm4 wZGGuDWiScYf1 HSvhJUldyxOICHXIlKs5Sd zrjgmiJnpXW8YcnKKPR wMdaHjXMqZWD0Y",
+            "budget": 13368,
+            "bidEnds": "9/28/2018",
+            "completeBy": "12/9/2018",
+            "bids" : [ {"user": "earmit1", "amount": "13000"}]
+          }, {
+            "title": "Diverse well-modulated hub",
+            "description": "9CD0sQ yHxxjtdKd15Zs0TKJ7 L0BQGfECngtW5 oaPHeC4WvuHkReNOSmbrh7 mZOGeBQ0eKBFHCKWWTR CkSo1X8Llg69xF",
+            "budget": 19370,
+            "bidEnds": "9/8/2018",
+            "completeBy": "10/28/2018"
+          }, {
+            "title": "Multi-channelled next generation customer loyalty",
+            "description": "XcoHSa wvH49ezQRMbeoYrof9 OZzBClxazjE1E owNVc0hNcYUYKEBF0fT9pp B8L6xZTFwwmzqSxTwxJ VttFAdw0lzNI4V",
+            "budget": 17271,
+            "bidEnds": "9/16/2018",
+            "completeBy": "11/27/2018"
+          }, {
+            "title": "Synergized mobile function",
+            "description": "AJ9VKO Kd3wVQghOGpJKbOgJY 8CyLAL4RlrSTO Ss6nr7DkH5J280lnqaemIo jG33ZpLyKq2oI8Yu18W gmf8GbNXg3qal2",
+            "budget": 16716,
+            "bidEnds": "9/5/2018",
+            "completeBy": "10/22/2018"
+          }, {
+            "title": "Face to face mission-critical collaboration",
+            "description": "0Vqtum sDLcwCOAGK1LIgIZNX 0chQVl7PPGDFi xHY6bIm4wyY8JJBNYMVRKJ l2W6LZyz0hf41Ft8wOS aHT37XcVBCAWfJ",
+            "budget": 16733,
+            "bidEnds": "9/21/2018",
+            "completeBy": "12/7/2018"
+          }, {
+            "title": "Self-enabling reciprocal alliance",
+            "description": "zufSwc iF8rrx0goIppCaweW1 EKekH5lCrtYzU RRljK91fLtxJmzJfCcrZWm eTsouJWdOUVyMJG3ytW Nkb6ubDJeriq8S",
+            "budget": 10060,
+            "bidEnds": "9/1/2018",
+            "completeBy": "10/15/2018"
+          }, {
+            "title": "Grass-roots context-sensitive customer loyalty",
+            "description": "oJQ6oC NEkbfkj8jxvkTwoK9Y HoVrYk3skd1KE n4G3ltiwaRK32pPs7E6XlP Yq3QlLgU22t1YkPrIsr 0a5ltE2zb8uXfd",
+            "budget": 17353,
+            "bidEnds": "9/20/2018",
+            "completeBy": "2/7/2019"
+          }, {
+            "title": "De-engineered human-resource system engine",
+            "description": "ozW3Wm DWbElOuvhJxVswuYGm iczVXDHS2GIpD Kdp4XkdVW7STqIQtd7CdKc NirCrPflpSLhYaQvppM 8KBKygl3RZqJUF",
+            "budget": 10696,
+            "bidEnds": "9/3/2018",
+            "completeBy": "12/7/2018"
+          }, {
+            "title": "Expanded asymmetric array",
+            "description": "GdywTA c7zkldyTSUagdUjMZA Ir8vHlBE6VR9H rbez0WCe0cuq3yM9Aq0P0F Nm0lg5Zmi6FHQDzS3yl jFd0N11KyrpbFo",
+            "budget": 16130,
+            "bidEnds": "9/15/2018",
+            "completeBy": "12/10/2018"
+          }, {
+            "title": "Multi-lateral well-modulated software",
+            "description": "xfg6hl PBQy44m4DPqbxF3apY BSXafj0H8SFhx A13pwOcU614yj0INkEflij HONGAFrZvzR3svf7gpU d3D8Y6cqOyBvns",
+            "budget": 11563,
+            "bidEnds": "9/21/2018",
+            "completeBy": "12/15/2018"
+          }],
+        "astuddeard3": [{
+            "title": "Public-key intermediate website",
+            "description": "Pzrl90 OE8fcRan05kdz8hvhp SKmyjJOKhW0xZ tGlVDfWoLoKLJXIIoB1hUS lRTqllA50wuR2AMAgA3 UwJMvf8ZYGE74j",
+            "budget": 19135,
+            "bidEnds": "9/28/2018",
+            "completeBy": "1/5/2019"
+          }, {
+            "title": "Business-focused zero defect knowledge base",
+            "description": "EFaEXc 67R6XmBrVjxP5ia2PY pdQM7FnpEPCci BIjvvpqNsKtuFpP7Gj6Gvi 4kEtiT9WhdQesNuej1U fEL5YmbbJ3cYa8",
+            "budget": 10227,
+            "bidEnds": "9/2/2018",
+            "completeBy": "3/11/2019"
+          }, {
+            "title": "Profit-focused next generation interface",
+            "description": "Rxl7IH AFNxzUsrHOCJ2uJrPT aSaFzlXKMAHjH Kcg0sffofsr7rMFYtiDijX PTbNUMbK7tnZCqJfj7P uZ1THT3rgt2smq",
+            "budget": 11586,
+            "bidEnds": "9/28/2018",
+            "completeBy": "3/14/2019"
+          }, {
+            "title": "Versatile disintermediate neural-net",
+            "description": "VkFunq SB9aa2GmKVRMyiDV0c JiKiLo6govY77 myTSVAZhmG368b6uq6DKCT xiPf5HzaqvlY8l8SCw5 KUY4rczoXSQCAZ",
+            "budget": 19678,
+            "bidEnds": "9/20/2018",
+            "completeBy": "3/26/2019"
+          }, {
+            "title": "Reactive multimedia internet solution",
+            "description": "Dm8A5Z tcPxbKg6Dx5DtP0wf0 UYZX7R3sy0Wct ZsYJmputglTytRaMrdHJKS hxTNAZjL2gkukQLIodC OLZmNyC9dTWimW",
+            "budget": 12426,
+            "bidEnds": "9/13/2018",
+            "completeBy": "12/22/2018"
+          }, {
+            "title": "Sharable uniform encryption",
+            "description": "rvUE3r 9gxzud7Q6ei5br6TbP 3dI8bvtQ5Uryj VW1xyjiCp9BgSKqBZUSbSh efSoagRhqoZm2foWzqB rzEFcEyofdzpCl",
+            "budget": 18990,
+            "bidEnds": "9/6/2018",
+            "completeBy": "10/15/2018"
+          }, {
+            "title": "Reactive upward-trending implementation",
+            "description": "V31bX2 7jHXu2dlUeAstjuYxH gtFsY86zFjpJb 2MUSCJRZK9dapk55NrRv2I KBDkB9ZPfvsNSac7wi5 G8fjYhs8qkpMA4",
+            "budget": 10290,
+            "bidEnds": "9/21/2018",
+            "completeBy": "2/22/2019"
+          }, {
+            "title": "Grass-roots discrete database",
+            "description": "X8C3l0 m7LsaXWhUUgTfPPZHG 0T3jTj1AEf4n9 DMYs9so3DenIMUpQYmhRaM 3iP9RKRYLp8W9rs2ogh L7HhRvF3SEaqMU",
+            "budget": 16674,
+            "bidEnds": "9/12/2018",
+            "completeBy": "10/20/2018"
+          }, {
+            "title": "Distributed holistic array",
+            "description": "4BWSOB P2Habj9aaHasE6DqL2 sifCRDhdoQl1r nfxyp6emYtqoKvPgnJ7xRv pKrPkwbcKskrkCX1hAS YcJrJmwkJz7lXf",
+            "budget": 12803,
+            "bidEnds": "9/21/2018",
+            "completeBy": "3/6/2019"
+          }, {
+            "title": "Cross-platform transitional infrastructure",
+            "description": "Zwohra b3yRNsW8IHvc53qiAi f7ARHvg3xM4Su LZQOmor8RQASlwuFXIElrY hEsErIvAWQSPQ1Wa4Yn uULEJaAhF5c5qX",
+            "budget": 12220,
+            "bidEnds": "9/21/2018",
+            "completeBy": "2/10/2019"
+          }],
+        "jsapp6": [{
+            "title": "Implemented mobile focus group",
+            "description": "1h3LeP uvrqhkpxJjZF2xZTNa YtYhhWQ76roDi PuVYkglkSHaZPeOOMpNPJq qUvNlpxy4WkJLW5gV9x wC0pJx2RTPCS4O",
+            "budget": 15425,
+            "bidEnds": "9/6/2018",
+            "completeBy": "12/18/2018"
+          }, {
+            "title": "Ameliorated asynchronous core",
+            "description": "cyfx1s SUmlocYDwLro45pYb6 u1GUM9mzelYa0 xfJxsi890VDXRUmLz9njo7 0leviZMTGL4i4e3Z6lT qy4afdgePZAz3I",
+            "budget": 10770,
+            "bidEnds": "9/29/2018",
+            "completeBy": "12/3/2018"
+          }, {
+            "title": "De-engineered non-volatile moderator",
+            "description": "74mrIa 8B31F6x7cE0OBY4fb8 HKk8hTyhHpsMC sWxU9uSJamNaAJYRZxxgOZ AjVZfKO0ZvQynzhp3Vt FsT8WXDhJvZPwL",
+            "budget": 12652,
+            "bidEnds": "9/29/2018",
+            "completeBy": "2/23/2019"
+          }, {
+            "title": "Devolved modular algorithm",
+            "description": "VKj2Cu 3xg7MbgmIWFlFx4gl3 9dYXr0RqY3npi luuELPlTzLGREr9k74XJxD IVWu5KDRq1LAGJjv3sE vDCj7aZcsPmyao",
+            "budget": 14889,
+            "bidEnds": "9/25/2018",
+            "completeBy": "11/20/2018"
+          }, {
+            "title": "Implemented demand-driven adapter",
+            "description": "zZNQ8A WrdqyfST2arcjQY2ZD ccp6tbQfek22C niNJW9RUxKw88ei7wJpD7z 4iaCNODIpgTvdERFURX MsaxS32IMu0GHm",
+            "budget": 14342,
+            "bidEnds": "9/1/2018",
+            "completeBy": "2/28/2019"
+          }, {
+            "title": "Synergistic systematic intranet",
+            "description": "DseZRZ dgBe3tHmtyEeIJpiw3 i1XvCKOiJgZGz tcyxt3VHK1iZkIPqSWAsLu uRsTSsF3iiEoiCQVHZJ 5AUywEWo6iooC0",
+            "budget": 13488,
+            "bidEnds": "9/29/2018",
+            "completeBy": "1/30/2019"
+          }, {
+            "title": "Integrated directional neural-net",
+            "description": "7NQxn5 Pvfntog20zROUNpZWm BNJbL1UkkFHDg peV4Troit5vr61iKhu6aGq KaRSzVYHv4Q7LUNkAqo yw0XyiV41zW4UN",
+            "budget": 15515,
+            "bidEnds": "9/26/2018",
+            "completeBy": "1/4/2019"
+          }, {
+            "title": "Multi-channelled hybrid help-desk",
+            "description": "3tsaLB YsH9NpclqkJTUBstgH 8UaNEl2ACBh4O 9UR5Hm2gIwgTM0A2ZCCqX2 ghT20lsEzsU70yb8pfj i8NKaomZfV6HW3",
+            "budget": 13792,
+            "bidEnds": "9/29/2018",
+            "completeBy": "1/7/2019"
+          }, {
+            "title": "Fundamental local leverage",
+            "description": "NlDSj5 KGUWSRX4jpsxkkhzEI aeR6TzEPVJFxh JpVm0qYUj4KAsQfzIq7nqP aaiwGY2R3YBRBaA1ke4 edSfgPHxMrnKU4",
+            "budget": 17059,
+            "bidEnds": "9/29/2018",
+            "completeBy": "2/1/2019"
+          }, {
+            "title": "Vision-oriented object-oriented attitude",
+            "description": "T6cjoK 7ADO2qgFIMybPBRHN2 XExskzRXfCOtk mjmOd0002dx9PwWwT8ekVv xaRoxx3H48gcBZYsDxE 4eWDBwQWsMnFn8",
+            "budget": 16115,
+            "bidEnds": "9/26/2018",
+            "completeBy": "10/2/2018"
+          }]
+    }
+}

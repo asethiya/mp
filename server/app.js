@@ -5,12 +5,14 @@ const session = require('express-session');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const errorHandler = require('errorhandler');
+const config = require('./config/env');
 
 //Configure mongoose's promise to global promise
 mongoose.promise = global.Promise;
 
 //Configure isProduction variable
 const isProduction = process.env.NODE_ENV === 'production';
+const isTest = process.env.NODE_ENV === 'test';
 
 //Initiate our app
 const app = express();
@@ -26,17 +28,28 @@ if(!isProduction) {
 }
 
 //Configure Mongoose
-mongoose.connect('mongodb+srv://db-user:1234@cluster0-rvrjn.mongodb.net/test?retryWrites=true', { useNewUrlParser: true } );
-mongoose.set('debug', true);
+mongoose.connect(config.db, { useNewUrlParser: true } );
+mongoose.connection.on('error', () => {
+  throw new Error(`unable to connect to database: ${config.db}`);
+});
+mongoose.connection.on('connected', () => {
+  console.log(`Connected to database: ${config.db}`);
+});
+mongoose.set('debug', !isProduction);
 
 //Models & routes
-require('./models/Users');
 require('./config/passport');
 app.use(require('./routes'));
 
+if(!isProduction && !isTest) {
+  try{
+    require('./mock/seedDB');
+  }catch(e){}
+}
+
 //Error handlers & middlewares
 if(!isProduction) {
-  app.use((err, req, res) => {
+  app.use((err, req, res, next) => {
     res.status(err.status || 500);
 
     res.json({
@@ -48,7 +61,7 @@ if(!isProduction) {
   });
 }
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
 
   res.json({
@@ -59,4 +72,4 @@ app.use((err, req, res) => {
   });
 });
 
-app.listen(8000, () => console.log('Server running on http://localhost:8000/'));
+app.listen(config.port, () => console.log('Server running on http://localhost:' + config.port  +'/'));
