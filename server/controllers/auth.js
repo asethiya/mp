@@ -43,7 +43,8 @@ function respondJWT(req, res) {
     });
   } else {
     res.status(200).json({
-      jwt: req.token
+      jwt: req.token,
+      user: req.user
     });
   }
 }

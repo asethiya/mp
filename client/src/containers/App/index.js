@@ -26,7 +26,7 @@ class App extends Component {
           <Switch>
             {/* A user can't go to the HomePage if is not authenticated */}
             <Route path="/auth/:authType/:id?" component={AuthPage} />
-            <PrivateRoute path="/" component={HomePage} exact />
+            <PrivateRoute path="/" component={HomePage} />
             <Route path="" component={NotFoundPage} />
           </Switch>
         </div>

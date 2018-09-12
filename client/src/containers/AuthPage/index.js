@@ -36,10 +36,10 @@ class AuthPage extends React.Component {
 
     switch (this.props.match.params.authType) {
       case 'login':
-        requestURL = 'http://localhost:8000/api/auth/login';
+        requestURL = 'http://localhost:8000/api/auth/token';
         break;
       case 'register':
-        requestURL = 'http://localhost:1337/auth/local/register';
+        requestURL = 'http://localhost:8000/api/users';
         break;
       case 'reset-password':
         requestURL = 'http://localhost:1337/auth/reset-password';
@@ -75,7 +75,7 @@ class AuthPage extends React.Component {
       set(body, 'url', 'http://localhost:3000/auth/reset-password');
     }
 
-    request(requestURL, { method: 'POST', body: { user: this.state.value} })
+    request(requestURL, { method: 'POST', body: this.state.value })
       .then(response => {
         auth.setToken(response.jwt, body.rememberMe);
         auth.setUserInfo(response.user, body.rememberMe);

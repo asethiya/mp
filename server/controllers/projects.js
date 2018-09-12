@@ -50,7 +50,7 @@ function addBid(user, project, amount){
     .then((savedBid) => {
       Object.assign(project, {winningBid: savedBid, totalBids: project.totalBids +1});
       project.save()
-      .then(() => resolve('Bid submitted successfully'),
+      .then((savedProject) => resolve(savedProject),
         (e) => reject(e));
     }, (e) => reject(e))
   })
@@ -80,8 +80,8 @@ function bid(req, res, next) {
   }
 
   addBid({_id: req.user.id}, project, bid.amount)
-  .then((message) => {
-    res.status(200).send(message)
+  .then((savedProject) => {
+    res.status(200).send(savedProject)
   }, (e) => next(e));
 }
 
